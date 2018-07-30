@@ -12,8 +12,6 @@ import java.util.List;
 
 /**
  * @Description: 代码生成器，根据数据表名称生成对应的Model、Mapper简化开发。
- * @author 张瑶
- * @date 2018/4/23 20:28
  */
 public class CodeGenerator {
 
