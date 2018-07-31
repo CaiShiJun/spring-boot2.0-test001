@@ -1,3 +1,24 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhostDB
+Source Server Version : 50720
+Source Host           : localhost:3306
+Source Database       : demo
+
+Target Server Type    : MYSQL
+Target Server Version : 50720
+File Encoding         : 65001
+
+Date: 2018-07-31 22:40:57
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for system_log
+-- ----------------------------
+DROP TABLE IF EXISTS `system_log`;
 CREATE TABLE `system_log` (
   `id` varchar(32) NOT NULL,
   `description` varchar(50) DEFAULT NULL COMMENT '日志信息描述',
@@ -12,3 +33,6 @@ CREATE TABLE `system_log` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统日志表';
 
+-- ----------------------------
+-- Records of system_log
+-- ----------------------------
