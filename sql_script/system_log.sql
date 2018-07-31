@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2018-07-31 22:40:57
+Date: 2018-07-31 23:24:35
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `system_log`;
 CREATE TABLE `system_log` (
   `id` varchar(32) NOT NULL,
   `description` varchar(50) DEFAULT NULL COMMENT '日志信息描述',
-  `method` varchar(20) DEFAULT NULL COMMENT '方法名称',
+  `method` varchar(100) DEFAULT NULL COMMENT '方法名称',
   `log_type` varchar(10) DEFAULT NULL COMMENT '日志类型 0是正常，1是异常',
   `request_ip` varchar(30) DEFAULT NULL COMMENT '请求的ip',
   `exception_code` varchar(50) DEFAULT NULL COMMENT '异常错误码',
@@ -36,3 +36,5 @@ CREATE TABLE `system_log` (
 -- ----------------------------
 -- Records of system_log
 -- ----------------------------
+INSERT INTO `system_log` VALUES ('0cece02d0ce64d7f885b8e6c2407f8b1', '查询', 'class com.example.demo.controller.UserInfoController.selectById', '0', '0:0:0:0:0:0:0:1', null, null, '{\"id\":\"\\\"1\\\"\"}', '1', '2018-07-31 23:20:04');
+INSERT INTO `system_log` VALUES ('50452ef8887c4c56b0ad559af5543a72', '查询', 'class com.example.demo.controller.UserInfoController.selectById', '0', '0:0:0:0:0:0:0:1', null, null, '{\"id\":\"\\\"1\\\"\"}', '1', '2018-07-31 23:20:51');
